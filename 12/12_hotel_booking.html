@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tourism Sites of Kyoto, Japan</title>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <style>
+        /* CSS for body */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* CSS for navbar container */
+        .navbar {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+        }
+
+        /* CSS for navbar links */
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            text-align: center;
+        }
+
+        /* CSS for hover effect on navbar links */
+        .navbar a:hover {
+            background-color: #575757;
+            color: white;
+        }
+
+        /* CSS for logo and header */
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+
+        /* Main content container */
+        .main-content {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        /* Form headings */
+        .main-content h1,
+        .main-content h2 {
+            color: #333;
+            margin-top: 0;
+        }
+
+        /* Form styling */
+        form {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        /* Label styling */
+        label {
+            display: block;
+            font-weight: bold;
+            color: #444;
+        }
+
+        /* Input and select styling */
+        input[type="text"],
+        input[type="email"],
+        input[type="tel"],
+        input[type="date"],
+        input[type="number"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        /* Adjust textarea styling */
+        textarea {
+            grid-column: span 2;
+            /* Span across both columns */
+        }
+
+        /* Button styling */
+        button {
+            background-color: #007BFF;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin-top: 10px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            grid-column: span 2;
+            /* Span across both columns */
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Additional information section */
+        section {
+            margin-top: 20px;
+        }
+
+        section p {
+            line-height: 1.6;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <!-- Navbar -->
+        <div class="navbar">
+            <div class="logo">
+                <span class="material-symbols-outlined">
+                    fort
+                </span>
+                Tourism Sites of Kyoto, Japan
+            </div>
+            <a href="12_home.html">Home</a>
+            <a href="12_heritage.html">Heritage</a>
+            <a href="12_hotel_booking.html">Hotel Booking</a>
+            <a href="12_gallery.html">Gallery</a>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <h1>Book Your Stay</h1>
+        <p>Use the form below to book your stay at one of our recommended hotels in Kyoto. Fill out the details to
+            secure your reservation and enjoy a comfortable and memorable experience.</p>
+
+        <!-- Hotel Booking Form -->
+        <section>
+            <h2>Booking Form</h2>
+            <form action="/submit-booking" method="post">
+                <!-- Name Field -->
+                <label for="full-name">Full Name:</label>
+                <input type="text" id="full-name" name="full_name" required>
+
+                <!-- Email Field -->
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Phone Field -->
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <!-- Check-in Date Field -->
+                <label for="check-in">Check-in Date:</label>
+                <input type="date" id="check-in" name="check_in" required>
+
+                <!-- Check-out Date Field -->
+                <label for="check-out">Check-out Date:</label>
+                <input type="date" id="check-out" name="check_out" required>
+
+                <!-- Number of Guests Field -->
+                <label for="guests">Number of Guests:</label>
+                <input type="number" id="guests" name="guests" min="1" required>
+
+                <!-- Room Type Field -->
+                <label for="room-type">Room Type:</label>
+                <select id="room-type" name="room_type" required>
+                    <option value="">Select a room type</option>
+                    <option value="single">Single Room</option>
+                    <option value="double">Double Room</option>
+                    <option value="suite">Suite</option>
+                </select>
+
+                <!-- Special Requests Field -->
+                <label for="special-requests">Special Requests:</label>
+                <textarea id="special-requests" name="special_requests" rows="4"></textarea>
+
+                <!-- Submit Button -->
+                <button type="submit">Book Now</button>
+            </form>
+        </section>
+
+        <!-- Additional Information -->
+        <section>
+            <h2>Need Assistance?</h2>
+            <p>If you have any questions or need help with your booking, please contact us at [Your Phone Number] or
+                email us at [Your Email Address]. Our team is here to assist you with any inquiries or special requests.
+            </p>
+        </section>
+    </main>
+
+
+
+
+</body>
+
+</html>

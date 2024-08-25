@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admission</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            text-decoration: none;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: rgb(237, 237, 155);
+        }
+        .logo-con {
+            height: 100%;
+            width: max-content;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 8px 10px;
+            font-size: 22px;
+        }
+
+        main {
+            
+            width: 80%;
+            padding: 20px 25px;
+            margin: 15px auto;
+            background-color: #fcfcfc;
+            border-radius: 25px;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+
+        form {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .input-con1,
+        .input-con2,
+        .input-con3 {
+            width: 80%;
+            margin: 10px auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 5px 30px;
+        }
+
+        .input-head {
+            grid-column: 1/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        h1{
+            font-size: 20px;
+            letter-spacing: 1px;
+        }
+        
+        .input-box {
+            margin: 5px 0px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            flex-direction: column;
+        }
+        .input-radio-con{
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+        .input-radio{
+            margin-right: 10px;
+        }
+        .input-radio-label{
+            margin-right: 35px
+        }
+        .input {
+            margin-top: 5px;
+            width: 100%;
+            height: 35px;
+        }
+        .upload-box{
+            margin: 5px 0px;
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+        button{
+            padding: 5px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="logo-con">
+            <i class="fa-solid fa-graduation-cap" style="margin-right:10px ;"></i>
+            <p>Kalamandi University Admission Form</p>
+        </div>
+        <form action="">
+            <div class="input-con1">
+                <div class="input-head">
+                    <h1>Student Information</h1>
+                </div>
+                <div class="input-box">
+                    <label for="s_name">Name: </label>
+                    <input class="input" id="Name" type="text">
+                </div>
+                <div class="input-box">
+                    <label for="b_date">Birth Date: </label>
+                    <input class="input" id="b_date" type="date">
+                </div>
+                <div class="input-box">
+                    <label for="">Gender: </label>
+                    <div class="input-radio-con">
+                        <input class="input-radio" id="M" name="gender" type="radio">
+                        <label class="input-radio-label" for="Male">M</label>
+                        <input class="input-radio" id="Female" name="gender" type="radio">
+                        <label class="input-radio-label" for="Female">F</label>
+                        <input class="input-radio" id="Others" name="gender" type="radio">
+                        <label class="input-radio-label" for="Others">Others</label>
+                    </div>
+                </div>
+                <div class="input-box">
+                    <label for="s_mail">Email: </label>
+                    <input class="input" id="s_mail" type="email">
+                </div>
+                <div class="input-box">
+                    <label for="s_phone">Phone: </label>
+                    <input class="input" id="s_phone" type="text">
+                </div>
+                <div class="input-box">
+                    <label for="s_address">Address: </label>
+                    <input class="input" id="s_address" type="text">
+                </div>
+            </div>
+            <div class="input-con2">
+                <div class="input-head">
+                    <h1>Document</h1>
+                </div>
+                <div class="upload-box">
+                    <label for="10_sheet">10th Marksheet:</label>
+                    <input class="upload" id="10_sheet" type="file">
+                </div>
+                <div class="upload-box">
+                    <label for="12_sheet">12th Marksheet:</label>
+                    <input class="upload" id="12_sheet" type="file">
+                </div>
+
+            </div>
+
+            <div class="input-con3">
+                <div class="input-head">
+                    <h1>Emergency Contact</h1>
+                </div>
+                <div class="input-box">
+                    <label for="e_name">Person's Name:</label>
+                    <input class="input" id="e_name" type="text">
+                </div>
+                <div class="input-box">
+                    <label for="relation">Relationship: </label>
+                    <input class="input" id="relation" type="text">
+                </div>
+                <div class="input-box">
+                    <label for="e_mail">Email: </label>
+                    <input class="input" id="e_mail" type="text">
+                </div>
+                <div class="input-box">
+                    <label for="e_phone">Phone: </label>
+                    <input class="input" id="e_phone" type="text">
+                </div>
+            </div>
+            <button>Submit</button>
+        </form>
+    </main>
+</body>
+
+</html>
